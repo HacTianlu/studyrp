@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Learning Game</title>
+    <link rel="stylesheet" href="flashcard.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 5px;
+        }
+        .flashcard {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #f9f9f9;
+        }
+        .flashcard.flipped {
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flashcard Learning Game</h1>
+
+    <!-- Khu vực quản lý các bộ flashcards -->
+    <div id="setupContainer">
+        <h2>Quản lý Flashcards</h2>
+        <label for="cardCount">Số lượng thẻ bài:</label>
+        <input type="number" id="cardCount" min="1" value="3">
+        <button id="setupCardsButton">Tạo thẻ</button>
+        <button id="saveFlashcardsButton">Lưu bộ hiện tại</button>
+        <div id="flashcardList">
+            <!-- Danh sách các bộ flashcards đã lưu -->
+        </div>
+    </div>
+
+    <!-- Khu vực nhập dữ liệu cho các thẻ -->
+    <div id="formContainer" class="hidden">
+        <h2>Nhập từ khóa và định nghĩa</h2>
+        <form id="cardForm">
+            <!-- Các thẻ input sẽ được thêm động bằng JS -->
+        </form>
+        <button id="startGameButton">Bắt đầu học</button>
+    </div>
+
+    <!-- Khu vực học tập thẻ bài -->
+    <div id="gameContainer" class="hidden">
+        <h2>Nhấp vào thẻ để lật</h2>
+        <div id="cardDisplay">
+            <!-- Các thẻ flashcards sẽ hiển thị ở đây -->
+        </div>
+    </div>
+
+    <script src="flashcard.js"></script>
+</body>
+</html>

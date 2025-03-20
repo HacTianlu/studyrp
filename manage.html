@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Trắc Nghiệm - StudyRP</title>
+    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-title">
+            <img src="logorp.gif" class="logo">
+            <tittle>StudyRP</tittle>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="manage.html">Tạo bài tập</a></li>
+                <li><a href="#share">Chia sẻ bài tập</a></li>
+                <li><a href="#login">Đăng nhập</a></li>
+            </ul>
+        </nav>
+    </header>
+    <title>Quản Lý Bài Tập Trắc Nghiệm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Bài Tập Trắc Nghiệm</title>
+    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hệ Thống Quản Lý Bài Tập Trắc Nghiệm</h1>
+
+    <!-- Menu chính -->
+    <div id="mainMenu" class="container">
+        <button id="createQuizButton">Tạo bài tập mới</button>
+        <button id="showQuizListButton">Hiển thị danh sách bài tập</button>
+    </div>
+
+    <!-- Tạo bài tập -->
+    <div id="createQuiz" class="container hidden">
+        <h2>Tạo Bài Tập Mới</h2>
+        <label for="quizName">Tên bài tập:</label>
+        <input type="text" id="quizName" required><br><br>
+        <label for="numberOfQuestions">Số lượng câu hỏi:</label>
+        <input type="number" id="numberOfQuestions" min="1" required><br><br>
+        <button id="generateQuestionsButton">Tạo câu hỏi</button>
+        <div id="questionsContainer" class="container hidden"></div>
+        <button id="saveQuizButton" class="hidden">Lưu bài tập</button>
+        <button id="goBackButton">Quay lại</button>
+    </div>
+
+    <!-- Danh sách bài tập -->
+    <div id="quizList" class="container hidden">
+        <h2>Danh Sách Bài Tập</h2>
+        <div id="quizContainer"></div>
+        <button id="goBackFromListButton">Quay lại</button>
+    </div>
+
+    <!-- Làm bài tập -->
+    <div id="startQuiz" class="container hidden">
+        <h2>Làm Bài Tập</h2>
+        <div id="quizQuestions"></div>
+        <button id="submitQuizButton">Nộp bài</button>
+        <button id="goBackFromQuizButton">Quay lại</button>
+    </div>
+
+    <!-- Kết quả -->
+    <div id="quizResult" class="container hidden">
+        <h2>Kết Quả</h2>
+        <div id="resultSummary"></div>
+        <button id="retryQuizButton">Làm Lại</button>
+        <button id="goBackFromResultButton">Quay lại</button>
+    </div>
+
+    <!-- Liên kết tệp JavaScript -->
+    <script src="manage.js"></script>
+</body>
+</html>
